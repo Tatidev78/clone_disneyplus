@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const buttons = documentElement.querySelectorAll('[data-tab-button]');
+    const buttons = document.querySelectorAll('[data-tab-button]');
+    //"Espere o HTML carregar completamente e, só então, procure por todos os elementos com o atributo data-tab-button no CSS."//
+    
 
     
-    for (let i=0; i< buttons.length; 1++){
+    for (let i=0; i< buttons.length; i++){
         buttons[i].addEventListener('click', function(botao){
-            const abaAlvo =botao.target.dataset.tabButton;
-            escondeTodasAbas();
-            const aba = document.querySelector(`[data-tab-id=${abaAlvo}]`)
-            abaAlvo.classList.add('shows__list--is-active');
+            const abaAlvo = botao.target.dataset.tabButton;
+            const aba = document.querySelector(`[data-tab-id=${abaAlvo}]`);
+            escondeTodasAbas();            
+            aba.classList.add('shows__list--is-active');
             removeBotaoAtivo();
             botao.target.classList.add('shows__tabs_button--is-active');
         })
@@ -16,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 function removeBotaoAtivo(){
-    const buttons =documentElement.querySelectorAll('[data-tab-button]');
+    const buttons =document.querySelectorAll('[data-tab-button]');
 
-    for (let i=0; i< buttons.length; 1++){
+    for (let i=0; i< buttons.length; i++){
         buttons[i].classList.remove('shows__tabs_button--is-active');
         }
     }
@@ -27,9 +29,9 @@ function removeBotaoAtivo(){
 
 
 function escondeTodasAbas(){
-    const tabsContainer =documentElement.querySelectorAll('[data-tab-id]');
+    const tabsContainer =document.querySelectorAll('[data-tab-id]');
 
-    for (let i=0; i< tabsContainer.length; 1++){
+    for (let i=0; i< tabsContainer.length; i++){
         tabsContainer[i].classList.remove('shows__list--is-active');
         }
     }
