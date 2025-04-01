@@ -26,21 +26,20 @@ min-height: 50vw;
         display: flex;
         justify-content: center;
     
-        &__button{
+        &__button {
             color: variaveis.$corDeTextoSecundario;
-            font-size:20px;
-            border:none;        
+            font-size: 20px;
+            border: none;
             padding-bottom: 5px;
             background: none;
             text-transform: uppercase;
             margin: 0 1vw;
             cursor: pointer;
-            border-bottom: 5px solid transparent;  
+            border-bottom: 5px solid transparent;
 
-            &--is-active{
-                border-color: variaveis.$corDeTextoSecundario;    
+            &--is-active {
+                border-color: variaveis.$corDeTextoSecundario;
             }
         }
     }
-
 }
