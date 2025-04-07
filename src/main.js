@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function(){
         questions[i].addEventListener('click', abreOuFechaResposta);
     }
 })
-function ocultElementos(){
+function ocultaElementos(){
     const header = document.querySelector('header');
     header.classList.add('header--is-hidden');
 }
